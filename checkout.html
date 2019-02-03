@@ -2,9 +2,503 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="description" content="bootstrap template">  <!--Description for search engine-->
+    <meta name="keywords" content="HTML,CSS,SCSS,JavaScript,Bootstrap"> <!--keywords for search engine-->
+    <meta name="author" content="Andy Basyn">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"> <!--Scale viewport "shrink-to-fit"default yes => can zoom on mobile if no,you can no longer zoom-->
+    <link rel="icon" href="assets/images/DSGN.png" type="image/gif" sizes="16x16">
+    <!--bootstrap.min.css-->
+    <link rel="stylesheet" href="bootstrap-4.1.3/css/bootstrap.min.css">
+    <!--style.css-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!--inulr-->
+    <title>checkout</title>
 </head>
-<body>
-$END$
+<body class="container-fluid">
+<header class="container">
+    <nav class="navbar navbar-expand-lg navbar-white bg-white d-flex">
+        <a class="navbar-brand" href="index.html"><img src="https://via.placeholder.com/150x150" alt="logo" class="img-fluid"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto d-flex">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-secondary text-uppercase link-after text-bold" href="#" id="mensDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        men :
+                    </a>
+                    <div class="dropdown-menu rounded-0" aria-labelledby="mensDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-secondary text-uppercase link-after text-bold" href="#" id="womensDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        women :
+                    </a>
+                    <div class="dropdown-menu rounded-0" aria-labelledby="womensDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-secondary text-uppercase link-after text-bold" href="#" id="boysDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        boys :
+                    </a>
+                    <div class="dropdown-menu rounded-0" aria-labelledby="boysDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-secondary text-uppercase link-after text-bold" href="#" id="girlsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        girls :
+                    </a>
+                    <div class="dropdown-menu rounded-0" aria-labelledby="girlsDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-secondary text-uppercase link-after text-bold" href="#" id="sportswearDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        sportswear :
+                    </a>
+                    <div class="dropdown-menu rounded-0" aria-labelledby="sportswearDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+        <form class="form-inline my-2 my-lg-0 align-self-start">
+
+            <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-append bg-white">
+                    <div class="input-group-text bg-white border-0"><a href="#" class="text-deco-none text-secondary fas fa-search"></a></div>
+                </div>
+                <input class="form-control mr-sm-2 rounded-0 focus-off" type="search" placeholder="Search" aria-label="Search">
+            </div>
+        </form>
+
+    </nav>
+    <div class="row  border-bottom">
+        <div class="col-12 d-flex">
+            <h1 class="text-capitalize text-dark ">checkout</h1>
+            <ul class="navbar-nav flex-row ml-auto">
+                <li class="text-capitalize text-secondary nav-item dropdown">
+                    <select id="languangeSelect" class="border-0 text-secondary text-capitalize focus-off">
+                        <option value="1" class="">english</option>
+                        <option value="2" class="">german</option>
+                        <option value="3" class="">日本語</option>
+                    </select>
+                </li>
+                <li class="text-capitalize text-secondary nav-item mr-5">
+                    <select id="currencySelect" class="border-0 text-secondary text-uppercase focus-off">
+                        <option value="1" class="">&pound; gbp</option>
+                        <option value="2" class="">&euro; eur</option>
+                        <option value="3" class="">&yen; jpy</option>
+                    </select>
+                </li>
+                <li class="nav-item dropdown position-relative">
+                    <a class="nav-link dropdown-toggle text-secondary link-after p-0" href="#" id="cartDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-shopping-cart"></i> 2 item(s) - <span class="cartCurrency">&pound;</span><span id="cartTotal">540</span>
+                    </a>
+                    <div class="dropdown-menu rounded-0 dropdown-menu-right" aria-labelledby="cartDropdown" id="cart">
+                        <p class="text-secondary ml-2">Recently added item(s)</p>
+                        <div class="product border-secondary m-2 position-relative">
+                            <div class="close position-absolute"><i class="fas fa-times text-dark"></i></div>
+                            <img src="https://via.placeholder.com/66x83" alt="get alt" class="p-2">
+                            <a class="text-deco-none text-dark text-uppercase product-name position-absolute" href="#">product name</a>
+                            <p class="text-secondary position-absolute cart-amount"><span class="cartAmount">1</span>x <span class="cartCurrency text-danger">&pound;</span><span class="productPrice text-danger">400</span></p>
+                        </div>
+                        <div class="product border-secondary m-2 position-relative">
+                            <div class="close position-absolute"><i class="fas fa-times text-dark"></i></div>
+                            <img src="https://via.placeholder.com/66x83" alt="get alt" class="p-2">
+                            <a class="text-deco-none text-dark text-uppercase product-name position-absolute" href="#">product name</a>
+                            <p class="text-secondary position-absolute cart-amount"><span class="cartAmount">1</span>x <span class="cartCurrency text-danger">&pound;</span><span class="productPrice text-danger">400</span></p>
+                        </div>
+                        <p class="text-uppercase text-dark ml-2 mb-0">shipping: <span class="currency text-danger">&dollar;</span><span class="text-danger">7</span></p>
+                        <p class="text-uppercase text-dark ml-2 mt-0">shipping: <span class="currency text-danger">&dollar;</span><span class="text-danger">7</span></p>
+                        <button class="btn-dark btn text-white rounded-0" id="checkoutBtn">checkout</button>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</header>
+<main class="container mb-2 mb-lg-5">
+    <!--breadcrum-->
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white p-0">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-capitalize">Home</a></li>
+                    <li class="breadcrumb-item text-capitalize active" aria-current="page">checkout</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!--end breadcrum-->
+    <div class="row">
+       <div class="col-12">
+           <div class="accordion" id="accordionExample">
+               <!--card 01-->
+               <section class="card">
+                   <div class="card-header d-flex justify-content-between" id="headingOne">
+
+                       <h2 class="mb-0 text-dark w-100">
+                           <button class="btn btn-link text-dark text-deco-none text-capitalize d-flex justify-content-between w-100" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                               <span class=""><small>step 1.</small></span>checkout option
+                           </button>
+                       </h2>
+                   </div>
+
+                   <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                       <div class="card-body">
+                           <section class="row">
+                               <div class="col-12 col-lg-7">
+                                   <div class="row">
+                                       <div class="col-12 bg-light d-flex justify-content-end">
+                                           <h3 class="text-dark text-uppercase py-2 mr-2 mb-0">new costumer</h3>
+                                       </div>
+                                   </div>
+                                   <div class="row">
+                                       <form class="mt-2 mt-5 ">
+                                           <p class="text-dark">Register with us for future convenience:</p>
+                                           <div class="">
+                                               <div class="custom-control custom-radio">
+                                                   <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                                   <label class="custom-control-label" for="customRadio1">Checkout as Guest</label>
+                                               </div>
+                                               <div class="custom-control custom-radio">
+                                                   <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                                   <label class="custom-control-label" for="customRadio2">Register</label>
+                                               </div>
+                                               <p class="text-dark mt-2 mb-auto">
+                                                   By creating an account with our store,
+                                                   you will be able to move through the checkout process faster,
+                                                   store multiple shipping addresses, view and track your orders in your account and more.
+                                               </p>
+                                           </div>
+
+                                       </form>
+                                   </div>
+
+                                   <div class="row d-flex justify-content-start "style="margin-top: 15.5%;">
+                                       <a class="btn-secondary btn rounded-0 text-white text-uppercase">continue</a>
+
+                                   </div>
+                               </div>
+                               <div class="col d-none d-lg-block"></div>
+                               <div class="col-12 col-lg-4">
+                                   <div class="row">
+                                       <div class="col-12 bg-light d-flex justify-content-end px-0 ml-lg-2">
+                                           <h3 class="text-dark text-uppercase py-2 mr-2 mb-0">register costumer</h3>
+                                       </div>
+                                   </div>
+                                   <form class="mt-2 mt-5 ">
+                                       <p class="text-dark">If you have an account with us, please log in.</p>
+                                       <div class="form-col border-bottom">
+                                           <div class="form-group">
+                                               <label for="inputEmail" class="text-secondary text-capitalize">enter your email*</label>
+                                               <input type="text" class="form-control rounded-0 focus-off" id="inputEmail" placeholder="" required>
+
+                                           </div>
+                                           <div class="form-group">
+                                               <label for="inputEmail" class="text-secondary text-capitalize">enter your password*</label>
+                                               <input type="password" class="form-control rounded-0 focus-off" id="emailInput" placeholder="" required>
+                                           </div>
+                                           <div class="form-group form-inline align-content-center">
+                                               <div class="custom-control custom-checkbox">
+                                                   <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                                   <label class="custom-control-label text-dark focus-off" for="customCheck1">Remember me</label>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <div class="form-row mt-2 d-flex justify-content-between">
+                                           <button class="btn-secondary btn rounded-0 text-white text-uppercase">login</button>
+                                           <a href="#" class="text-danger text-deco-none">Frogot your password?</a>
+                                       </div>
+                                   </form>
+                               </div>
+                           </section>
+                       </div>
+                   </div>
+               </section>
+               <!--card 01-->
+               <div class="card">
+                   <div class="card-header d-flex justify-content-between" id="headingTwo">
+
+                       <h2 class="mb-0 text-dark w-100">
+                           <button class="btn btn-link text-dark text-deco-none text-capitalize d-flex justify-content-between w-100" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                               <span class=""><small>step 2.</small></span>billing information
+                           </button>
+                       </h2>
+                   </div>
+                   <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                       <div class="card-body">
+                           <section class="row">
+                               <div class="col-12 col-lg-6">
+                                   <div class="row">
+                                       <div class="col-12 bg-light d-flex justify-content-end">
+                                           <h3 class="text-dark text-uppercase py-2 mr-2 mb-0">your personal details</h3>
+                                       </div>
+                                   </div>
+                                   <div class="row">
+                                       <form class="w-100">
+                                           <div class="form-group">
+                                               <input type="text" class="form-control rounded-0 focus-off my-2" id="inputFName" placeholder="Enter Your First Name *" required>
+                                           </div>
+                                           <div class="form-group">
+                                               <input type="text" class="form-control rounded-0 focus-off my-2" id="inputLName" placeholder="Enter Your Last Name *" required>
+                                           </div>
+                                           <div class="form-group">
+                                               <input type="email" class="form-control rounded-0 focus-off my-2" id="inputEmailAd" placeholder="Enter Your Email *" required>
+                                           </div>
+                                           <div class="form-group">
+                                               <input type="tel" class="form-control rounded-0 focus-off my-2" id="inputTelephone" placeholder="Enter Your Telephone *" required>
+                                           </div>
+                                           <div class="form-group">
+                                               <input type="text" class="form-control rounded-0 focus-off my-2" id="inputFax" placeholder="Enter Your Fax" >
+                                           </div>
+                                           <div class="form-group mb-2">
+                                               <input type="text" class="form-control rounded-0 focus-off my-2" id="inputCompany" placeholder="Enter Your Company" >
+                                           </div>
+                                           <div class="form-group">
+                                               <input type="password" class="form-control rounded-0 focus-off my-2" id="inputPass" placeholder="Enter Your Password *" required>
+                                           </div>
+                                           <div class="form-group">
+                                               <input type="password" class="form-control rounded-0 focus-off my-2" id="inputPassConf" placeholder="Confirm Your Password *" required>
+                                           </div>
+                                       </form>
+                                   </div>
+                                    <div class="row">
+                                        <div class="d-flex flex-column">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="newsCheck">
+                                                <label class="custom-control-label text-dark" for="newsCheck">I wish to subscribe to the Trego Store newsletter.</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="addressCheck">
+                                                <label class="custom-control-label text-dark" for="addressCheck">My delivery and billing addresses are the same.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  <!-- <div class="row d-flex justify-content-start "style="margin-top: 15.5%;">
+                                       <a class="btn-secondary btn rounded-0 text-white text-uppercase">continue</a>
+
+                                   </div>-->
+                               </div>
+
+                               <div class="col-12 col-lg-6">
+                                   <div class="row">
+                                       <div class="col-12 bg-light d-flex justify-content-end px-0 ml-lg-2">
+                                           <h3 class="text-dark text-uppercase py-2 mr-2 mb-0">your address</h3>
+                                       </div>
+                                   </div>
+                                   <form class="">
+                                       <div class="form-group">
+                                           <input type="text" class="form-control rounded-0 focus-off my-2" id="inputAddress1" placeholder="Enter Your Address 1 *" required>
+                                       </div>
+                                       <div class="form-group">
+                                           <input type="password" class="form-control rounded-0 focus-off my-2" id="inputAddress2" placeholder="Enter Your Address 2">
+                                       </div>
+                                       <div class="form-group">
+                                           <input type="password" class="form-control rounded-0 focus-off my-2" id="inputPassCode" placeholder="Enter Your Pas Code *" required>
+                                       </div>
+                                       <select class="custom-select focus-off rounded-0 my-1" required>
+                                           <option selected disabled>Country *</option>
+                                           <option value="1">United Kingdom</option>
+                                           <option value="2">Two</option>
+                                           <option value="3">Three</option>
+                                       </select>
+                                       <select class="custom-select focus-off rounded-0 my-1" required>
+                                           <option selected disabled>Region / State *</option>
+                                           <option value="1">region 1</option>
+                                           <option value="2">Two</option>
+                                           <option value="3">Three</option>
+                                       </select>
+                                   </form>
+                                   <div class="row" style="margin-top:30%;">
+                                    <form class="form-inline ml-3 d-flex justify-content-between">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="policyCheck">
+                                            <label class="custom-control-label text-dark" for="policyCheck">I have read and agree with the
+                                                <a href="#" class="text-deco-none text-dark border-bottom">Privacy Policy</a></label>
+                                        </div>
+                                        <button class="btn-secondary btn text-white text-uppercase rounded-0 ml-2">continue</button>
+                                    </form>
+
+
+
+                                   </div>
+                               </div>
+
+                           </section>
+                       </div>
+                   </div>
+               </div>
+               <div class="card">
+                   <div class="card-header d-flex justify-content-between" id="headingThree">
+
+                       <h2 class="mb-0 text-dark w-100">
+                           <button class="btn btn-link text-dark text-deco-none text-capitalize d-flex justify-content-between w-100" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                               <span class=""><small>step 3.</small></span>delivery details
+                           </button>
+                       </h2>
+                   </div>
+                   <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                       <div class="card-body">
+                           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                       </div>
+                   </div>
+               </div>
+               <div class="card">
+                   <div class="card-header d-flex justify-content-between" id="headingFour">
+
+                       <h2 class="mb-0 text-dark w-100">
+                           <button class="btn btn-link text-dark text-deco-none text-capitalize d-flex justify-content-between w-100" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                               <span class=""><small>step 4.</small></span>delivery method
+                           </button>
+                       </h2>
+                   </div>
+                   <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                       <div class="card-body">
+                           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                       </div>
+                   </div>
+               </div>
+               <div class="card">
+                   <div class="card-header d-flex justify-content-between" id="headingFive">
+
+                       <h2 class="mb-0 text-dark w-100">
+                           <button class="btn btn-link text-dark text-deco-none text-capitalize d-flex justify-content-between w-100" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                               <span class=""><small>step 5.</small></span>payment method
+                           </button>
+                       </h2>
+                   </div>
+                   <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                       <div class="card-body">
+                           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                       </div>
+                   </div>
+               </div>
+               <div class="card">
+                   <div class="card-header d-flex justify-content-between" id="headingSix">
+
+                       <h2 class="mb-0 text-dark w-100">
+                           <button class="btn btn-link text-dark text-deco-none text-capitalize d-flex justify-content-between w-100" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                               <span class=""><small>step 6.</small></span>confirm order
+                           </button>
+                       </h2>
+                   </div>
+                   <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                       <div class="card-body">
+                           Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+    </div>
+</main>
+<footer class="container">
+    <section id="info" class="row">
+        <div class="col-12 col-md-4">
+            <h4 class="text-uppercase text-dark mb-lg-5">useful links</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="#" class="text-deco-none text-dark text-capitalize">about us</a></li>
+                <li class="list-group-item"><a href="#" class="text-deco-none text-dark text-capitalize">delivery</a></li>
+                <li class="list-group-item"><a href="#" class="text-deco-none text-dark text-capitalize">legal notice</a></li>
+                <li class="list-group-item"><a href="#" class="text-deco-none text-dark text-capitalize">secure payment</a></li>
+                <li class="list-group-item"><a href="#" class="text-deco-none text-dark text-capitalize">terms &amp; conditions</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-4">
+            <h4 class="text-uppercase text-dark mb-lg-5">from twitter</h4>
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action">
+
+                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    <small class="text-muted">about 1 hour(s) ago</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+
+                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    <small class="text-muted">about 1 hour(s) ago</small>
+                </a>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <h4 class="text-uppercase text-dark mb-lg-5">contacts</h4>
+            <label for="inputPassword2" class="text-dark text-uppercase font-weight-bold">sign up for newsletter</label>
+            <form class="form-inline border-bottom border-secondary pb-lg-3">
+                <div class="form-group mb-2">
+                    <input type="email" class="form-control rounded-0 focus-off" id="inputPassword2" placeholder="Enter up for newsletter">
+                </div>
+                <button type="submit" class="btn text-white text-uppercase btn-secondary mb-2 rounded-0 focus-off">submit</button>
+            </form>
+            <address class="text-secondary text-capitalize pt-lg-2">
+                oxford street 48/188, <br>
+                london 02342, united kingdom <br>
+                <br>
+                phone: <a href="tel:+8900415-7812" class="text-deco-none text-secondary">8 (900) 415-7812</a> <br>
+                fax:    <a href="tel:+8900415-7812" class="text-deco-none text-secondary">8 (900) 415-7812</a> <br>
+                <br>
+                e-mail: <a href="mailto:trego@gmail.com?Subject=info" target="_top" class="text-deco-none text-secondary">trego@gmail.com</a>
+            </address>
+        </div>
+    </section>
+    <section class="row border-top border-secondary" id="bottom-nav">
+        <ul class="nav d-flex ">
+            <li class="nav-item pr-1">
+                <a class="nav-link text-secondary text-capitalize" href="#">log in</a>
+            </li>
+            <span class="pt-1">&verbar;</span>
+            <li class="nav-item px-1">
+                <a class="nav-link text-secondary text-capitalize" href="#">sign up</a>
+            </li>
+            <span class="pt-1">&verbar;</span>
+            <li class="nav-item px-1">
+                <a class="nav-link text-secondary text-capitalize" href="#">my wishlist</a>
+            </li>
+            <span class="pt-1">&verbar;</span>
+            <li class="nav-item px-1">
+                <a class="nav-link text-secondary text-capitalize" href="#">my account</a>
+            </li>
+            <span class="pt-1">&verbar;</span>
+            <li class="nav-item px-1">
+                <a class="nav-link text-secondary text-capitalize" href="#">checkout</a>
+            </li>
+        </ul>
+        <div class="d-inline-flex ml-md-auto mx-md-0 mx-sm-auto align-items-center">
+            <div class="circle bg-secondary mx-1"><a href="https://www.facebook.com" class="text-deco-none text-white text-center d-block" target="_blank"><i class="fab fa-facebook-f"></i></a></div>
+            <div class="circle bg-secondary mx-1"><a href="https://www.twitter.com" class="text-deco-none text-white text-center d-block" target="_blank"><i class="fab fa-twitter"></i></a></div>
+            <div class="circle bg-secondary mx-1"><a href="https://www.linkedin.com" class="text-deco-none text-white text-center d-block" target="_blank"><i class="fab fa-linkedin-in"></i></a></div>
+            <div class="circle bg-secondary mx-1"><a href="https://www.flickr.com" class="text-deco-none text-white text-center d-block" target="_blank"><i class="fab fa-flickr"></i></a></div>
+            <div class="circle bg-secondary ml-1"><a href="https://plus.google.com" class="text-deco-none text-white text-center d-block" target="_blank"><i class="fab fa-google-plus-g"></i></a></div>
+        </div>
+    </section>
+</footer>
+<!--jquery-->
+<script src="assets/js/jquery.min.js"></script>
+<!--masonry-->
+<script src="assets/js/masonry.pkgd.min.js"></script>
+<!--popper.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<!--bootstrap.min.js-->
+<script src="bootstrap-4.1.3/js/bootstrap.min.js"></script>
+<!--scripts-->
+<script src="assets/js/dsgn-script.js"></script>
 </body>
 </html>
