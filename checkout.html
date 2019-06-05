@@ -151,10 +151,9 @@
            <div class="accordion" id="accordionExample">
                <!--card 01-->
                <section class="card">
-                   <div class="card-header d-flex justify-content-between" id="headingOne">
-
+                   <div class="card-header d-flex justify-content-between" id="headingOne"><!--hide if already logged in-->
                        <h2 class="mb-0 text-dark w-100">
-                           <button class="btn btn-link text-dark text-deco-none text-capitalize d-flex justify-content-between w-100" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                           <button class="btn btn-link text-dark text-deco-none text-capitalize d-flex justify-content-between w-100" type="button" data-toggle="collapse"  aria-expanded="true" aria-controls="collapseOne"><!--data-target="#collapseOne"-->
                                <span class=""><small>step 1.</small></span>checkout option
                            </button>
                        </h2>
@@ -163,7 +162,7 @@
                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                        <div class="card-body">
                            <section class="row">
-                               <div class="col-12 col-lg-7">
+                               <div class="col-12 col-lg-7 ml-lg-2">
                                    <div class="row">
                                        <div class="col-12 bg-light d-flex justify-content-end">
                                            <h3 class="text-dark text-uppercase py-2 mr-2 mb-0">new costumer</h3>
@@ -175,7 +174,7 @@
                                            <div class="">
                                                <div class="custom-control custom-radio">
                                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                                                   <label class="custom-control-label" for="customRadio1">Checkout as Guest</label>
+                                                   <label class="custom-control-label" for="customRadio1">Checkout as Guest</label> <!--continue to billing info-->
                                                </div>
                                                <div class="custom-control custom-radio">
                                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
@@ -192,15 +191,15 @@
                                    </div>
 
                                    <div class="row d-flex justify-content-start "style="margin-top: 15.5%;">
-                                       <a class="btn-secondary btn rounded-0 text-white text-uppercase">continue</a>
+                                       <a class="btn-secondary btn rounded-0 text-white text-uppercase"  data-toggle="collapse" data-target="#collapseTwo">continue</a>
 
                                    </div>
                                </div>
-                               <div class="col d-none d-lg-block"></div>
-                               <div class="col-12 col-lg-4">
+
+                               <div class="col-12 col-lg-4 ml-lg-4">
                                    <div class="row">
                                        <div class="col-12 bg-light d-flex justify-content-end px-0 ml-lg-2">
-                                           <h3 class="text-dark text-uppercase py-2 mr-2 mb-0">register costumer</h3>
+                                           <h3 class="text-dark text-uppercase py-2 mr-2 mb-0">existing costumer</h3>
                                        </div>
                                    </div>
                                    <form class="mt-2 mt-5 ">
@@ -237,7 +236,7 @@
                    <div class="card-header d-flex justify-content-between" id="headingTwo">
 
                        <h2 class="mb-0 text-dark w-100">
-                           <button class="btn btn-link text-dark text-deco-none text-capitalize d-flex justify-content-between w-100" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                           <button class="btn btn-link text-dark text-deco-none text-capitalize d-flex justify-content-between w-100"  aria-expanded="true" aria-controls="collapseTwo">
                                <span class=""><small>step 2.</small></span>billing information
                            </button>
                        </h2>
@@ -248,7 +247,7 @@
                                <div class="col-12 col-lg-6">
                                    <div class="row">
                                        <div class="col-12 bg-light d-flex justify-content-end">
-                                           <h3 class="text-dark text-uppercase py-2 mr-2 mb-0">your personal details</h3>
+                                           <h3 class="text-dark text-uppercase py-2 mr-2 mb-0">your personal details</h3> <!--hide if checkout as guest or is logged in-->
                                        </div>
                                    </div>
                                    <div class="row">
@@ -329,11 +328,11 @@
                                    <div class="row" style="margin-top:30%;">
                                     <form class="form-inline ml-3 d-flex justify-content-between">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="policyCheck">
-                                            <label class="custom-control-label text-dark" for="policyCheck">I have read and agree with the
-                                                <a href="#" class="text-deco-none text-dark border-bottom">Privacy Policy</a></label>
+                                            <input type="checkbox" class="custom-control-input" id="policyCheck" required>
+                                            <label class="custom-control-label text-dark" for="policyCheck">I have read and agree with the &nbsp;
+                                                <a href="#" class="text-deco-none text-dark border-bottom">Privacy Policy *</a></label>
                                         </div>
-                                        <button class="btn-secondary btn text-white text-uppercase rounded-0 ml-2">continue</button>
+                                        <button class="btn-secondary btn text-white text-uppercase rounded-0 ml-2" data-toggle="collapse" data-target="#collapseThree">continue</button>
                                     </form>
 
 
@@ -349,7 +348,7 @@
                    <div class="card-header d-flex justify-content-between" id="headingThree">
 
                        <h2 class="mb-0 text-dark w-100">
-                           <button class="btn btn-link text-dark text-deco-none text-capitalize d-flex justify-content-between w-100" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                           <button class="btn btn-link text-dark text-deco-none text-capitalize d-flex justify-content-between w-100" type="button"  data-toggle="collapse" data-target="#collapseThree"  aria-expanded="true" aria-controls="collapseThree">
                                <span class=""><small>step 3.</small></span>delivery details
                            </button>
                        </h2>
@@ -357,7 +356,12 @@
                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                        <div class="card-body">
                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                           <form class="form-inline ml-3 d-flex justify-content-end">
+                               <button class="btn-secondary btn text-white text-uppercase rounded-0 ml-2" data-toggle="collapse" data-target="#collapseFour">continue</button>
+
+                           </form>
                        </div>
+
                    </div>
                </div>
                <div class="card">
@@ -372,6 +376,10 @@
                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                        <div class="card-body">
                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                           <form class="form-inline ml-3 d-flex justify-content-end">
+                               <button class="btn-secondary btn text-white text-uppercase rounded-0 ml-2" data-toggle="collapse" data-target="#collapseFive">continue</button>
+
+                           </form>
                        </div>
                    </div>
                </div>
@@ -387,6 +395,10 @@
                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                        <div class="card-body">
                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                           <form class="form-inline ml-3 d-flex justify-content-end">
+                               <button class="btn-secondary btn text-white text-uppercase rounded-0 ml-2" data-toggle="collapse" data-target="#collapseSix">continue</button>
+
+                           </form>
                        </div>
                    </div>
                </div>
@@ -481,12 +493,12 @@
                                </tbody>
                            </table>
                            <div class="flex-row justify-content-end d-flex">
-                               <button class="btn btn-secondary text-white text-uppercase rounded-0">confirm order</button>
+                               <button class="btn btn-secondary text-white text-uppercase rounded-0" type="submit">confirm order</button>
                            </div>
                        </div>
                    </div>
                </div>
-           </div>
+           </form>
        </div>
     </div>
 </main>
